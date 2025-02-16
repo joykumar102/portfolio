@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 const Footer = () => {
-    return (
-        <footer className="footer footer-center bg-[#1f242d]  text-white rounded p-10">
+  return (
+    <footer className="footer footer-center bg-[#1f242d]  text-white rounded p-10">
       <div className='grid grid-cols-1'>
 
         <div className='space-y-8'>
@@ -11,10 +12,14 @@ const Footer = () => {
           </div>
 
           <ul className='grid grid-flow-col gap-5 '>
-            <li className=' font-bold text-2xl'><a>Home</a></li>
-            <li className=' font-bold text-2xl'><a>About</a></li>
-            <li className=' font-bold text-2xl'><a>Projects</a></li>
-            <li className=' font-bold text-2xl'><a>Contact</a></li>
+            <li className='cursor-pointer font-bold text-2xl'><Link smooth={true} duration={1000}
+              activeClass='active' to='Home'>Home</Link></li>
+            <li className='cursor-pointer font-bold text-2xl'><Link smooth={true} duration={1000}
+              activeClass='active' to='about'>About</Link></li>
+            <li className='cursor-pointer font-bold text-2xl'><Link smooth={true} duration={1000}
+              activeClass='active' to='skills'>Skills</Link></li>
+            <li className='cursor-pointer font-bold text-2xl'><Link smooth={true} duration={1000}
+              activeClass='active' to='projects'>Projects</Link></li>
           </ul>
 
         </div>
@@ -25,7 +30,7 @@ const Footer = () => {
       </div>
 
     </footer>
-    );
+  );
 };
 
 export default Footer;

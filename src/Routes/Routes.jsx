@@ -1,11 +1,10 @@
 import {
     createBrowserRouter,
-    
-    
   } from "react-router-dom";
 
 import LayOuts from "../LayOuts/LayOuts";
 import Home from "../Pages/Home/Home";
+
 // import Error from "../Pages/Error/Error";
 ;
 
@@ -18,7 +17,8 @@ import Home from "../Pages/Home/Home";
         {
             path: '/',
             element: <Home></Home>
-        }
+        },
+    
       ]
     },
   ]);

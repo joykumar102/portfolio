@@ -1,0 +1,60 @@
+
+[
+    {
+        "id": 1,
+        "name": "Winter Cloth Donation",
+        "image": "projectImg1",
+        "description": "Donate winter clothing to keep those in need warm this season.",
+        "briefDescription":
+            "Crowd Funding  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
+        "techStack": "React | Tailwind CSS | JavaScript | NodeJs | ExpressJs | MongoDB",
+        "liveLink": "https://winter-clothing-donation-1b527.web.app/",
+        "githubLink":
+            "https://github.com/programming-hero-web-course1/b10-a9-authentication-joykumar102",
+        "details":
+            "During the development of this project, I learned how to create reusable components and manage state in React. The challenge was to ensure responsiveness across all devices. Future improvements include adding more animations and optimizing performance."
+    },
+    {
+        "id": 2,
+        "name": "Crowd Funding",
+        "image": "projectImg2",
+        "description": "Crowdfunding is raising money from many people online for projects, causes, or businesses.",
+        "briefDescription":
+            "Crowd Funding  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
+        "techStack": "React | Tailwind CSS | JavaScript | NodeJs | ExpressJs | MongoDB",
+        "liveLink": "https://crowd-funding-42c30.web.app/",
+        "githubLink":
+            "https://github.com/programming-hero-web-course2/b10-a10-client-side-joykumar102",
+        "details":
+            "During the development of this project, I learned how to create reusable components and manage state in React. The challenge was to ensure responsiveness across all devices. Future improvements include adding more animations and optimizing performance."
+    },
+    {
+        "id": 3,
+        "name": "Marathon Management",
+        "image": "projectImg3",
+        "description": "Marathon management involves planning, organizing, and executing marathon events efficiently.",
+        "briefDescription":
+            "Marathon Management  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
+        "techStack": "React, Tailwind CSS, JavaScript, NodeJs, ExpressJs, MongoDB",
+        "liveLink": "https://marathons-99a92.web.app/#slide1",
+        "githubLink":
+            "https://github.com/programming-hero-web-course2/b10a11-client-side-joykumar102",
+        "details":
+            "Building this platform taught me about react routing operations. The challenge was to implement efficient search functionality. Future improvements include adding user comments and social sharing options.."
+    },
+    {
+        "id": 4,
+        "name": "Newsapers Fullstack Website",
+        "image": "projectImg4",
+        "description": "A full-stack newspaper website manages articles, users, and media with front-end, back-end, and database integration for seamless publishing.",
+        "briefDescription":
+            "Marathon Management  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
+        "techStack": "React | Tailwind CSS | JavaScript | NodeJs | ExpressJs | MongoDB",
+        "liveLink": "https://newspaper-fullstack-fced2.web.app/",
+        "githubLink":
+            "https://github.com/Programming-Hero-Web-Course4/b10a12-client-side-joykumar102",
+        "details":
+            "Developing this app involved handling backend API integration and implementing secure user authentication. The main challenge was ensuring data security. Future improvements include adding more payment options and enhancing the UI."
+    }
+
+]

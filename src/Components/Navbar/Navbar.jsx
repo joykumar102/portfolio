@@ -1,28 +1,28 @@
 import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { toast } from 'react-toastify';
-
 
 
 const Navbar = () => {
+
     const links = (
         <>
 
-            <li className='text-white cursor-pointer font-bold text-lg hover:text-accent'><Link to="Home">Home</Link></li>
+            <li className='text-white cursor-pointer font-bold text-lg hover:text-accent'><Link smooth={true} duration={1000}
+                activeClass='active' to="Home">Home</Link></li>
             <li className='text-white cursor-pointer font-bold text-lg hover:text-accent'>
                 <Link
-                to="about"
-                smooth={true} duration={500}
-                activeClass='active'
-                    >
+                    to="about"
+                    smooth={true} duration={1000}
+                    activeClass='active'
+                >
                     About
                 </Link>
             </li>
             <li className='text-white font-bold text-lg hover:text-accent'>
                 <Link
-                     to="skills"
-                     smooth={true} duration={500} 
-                   activeClass='active'
+                    to="skills"
+                    smooth={true} duration={1000}
+                    activeClass='active'
                     className="cursor-pointer"
                 >
                     Skills
@@ -31,9 +31,9 @@ const Navbar = () => {
             <li className='text-white cursor-pointer font-bold text-lg hover:text-accent'>
                 <Link
                     to="projects"
-                    smooth={true} duration={500} 
+                    smooth={true} duration={1000}
                     activeClass='active'
-                    >
+                >
 
                     Projects
                 </Link>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <li className='text-white cursor-pointer font-bold text-lg hover:text-accent'>
                 <Link
                     to="contact"
-                    smooth={true} duration={500} 
+                    smooth={true} duration={1000}
                     activeClass='active'
                     className="cursor-pointer"
                 >
@@ -53,10 +53,9 @@ const Navbar = () => {
     )
 
 
-    return (
-
-        <div className="navbar fixed left-[50%] -translate-x-[50%]  z-20  py-8 bg-[#1f242d]  px-10">
-            <div className="navbar-start">
+return (
+        <div className="navbar  fixed top-0 z-10 bg-[#1f242d]/50 px-10">
+            <div className="navbar-start ">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg
@@ -75,37 +74,26 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
 
-                        className="text-black bg-gray-600 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {/* <li className='text-white font-bold text-lg hover:text-accent'><a>Home</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>About</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Projects</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Skills</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Contact</a></li> */}
+                        className="text-black bg-gray-900 menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
                         {links}
                     </ul>
                 </div>
                 <a className=" text-3xl text-accent font-bold">Joy Kumar</a>
             </div>
-            <div className="navbar-center hidden  lg:flex">
+            <div className="navbar-end hidden  lg:flex">
                 <ul className="menu menu-horizontal  text-black">
-                    {/* <li className='text-white font-bold text-lg hover:text-accent'><a>Home</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>About</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Projects</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Skills</a></li>
-                    <li className='text-white font-bold text-lg hover:text-accent'><a>Contact</a></li> */}
                     {links}
 
                 </ul>
             </div>
 
-            <div className='navbar-end '>
+            {/* <div className='navbar-end '>
 
 
-                <a className='btn bg-[#1f242d] border-accent hover:bg-accent  hover:shadow-none  shadow-accent text-white rounded-3xl text-xl'> Hire me</a>
+                <a className='btn outline-none bg-[#1f242d] border-accent hover:bg-accent  hover:shadow-none  shadow-accent text-white rounded-3xl text-xl'> Hire me</a>
 
-            </div>
+            </div> */}
         </div>
-
 
     );
 };

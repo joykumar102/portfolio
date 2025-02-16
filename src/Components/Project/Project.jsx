@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { Children, useState } from 'react';
 import projectImg1 from "../../assets/projects/winter.png";
-import projectImg2 from "../../assets/projects/marathon.png";
-import projectImg3 from "../../assets/projects/newspaper.png";
-import projectImg4 from "../../assets/projects/475652724_1594801601162899_6408779719833728231_n.png";
+import projectImg2 from "../../assets/projects/crowdfunding.png";
+import projectImg3 from "../../assets/projects/marathon.png";
+
+import projectImg4 from "../../assets/projects/newspaper.png";
+import {  motion } from "motion/react"
+import Scrool from '../ScrollReveal/Scrool';
+import { MdArrowOutward } from 'react-icons/md';
 
 
 const projects = [
     {
+
         name: "Winter Cloth Donation",
-        image: projectImg4,
+        image: projectImg1,
         description: "Donate winter clothing to keep those in need warm this season.",
         briefDescription:
             "Crowd Funding  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
-        techStack: "React, Tailwind CSS, JavaScript, NodeJs, ExpressJs, MongoDB",
+        techStack: "React | Tailwind CSS | JavaScript | NodeJs ",
         liveLink: "https://winter-clothing-donation-1b527.web.app/",
         githubLink:
             "https://github.com/programming-hero-web-course1/b10-a9-authentication-joykumar102",
@@ -20,12 +25,13 @@ const projects = [
             "During the development of this project, I learned how to create reusable components and manage state in React. The challenge was to ensure responsiveness across all devices. Future improvements include adding more animations and optimizing performance.",
     },
     {
+
         name: "Crowd Funding",
-        image: projectImg1,
+        image: projectImg2,
         description: "Crowdfunding is raising money from many people online for projects, causes, or businesses.",
         briefDescription:
             "Crowd Funding  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
-        techStack: "React, Tailwind CSS, JavaScript, NodeJs, ExpressJs, MongoDB",
+        techStack: "React | Tailwind CSS | JavaScript | NodeJs | ExpressJs | MongoDB",
         liveLink: "https://crowd-funding-42c30.web.app/",
         githubLink:
             "https://github.com/programming-hero-web-course2/b10-a10-client-side-joykumar102",
@@ -33,8 +39,9 @@ const projects = [
             "During the development of this project, I learned how to create reusable components and manage state in React. The challenge was to ensure responsiveness across all devices. Future improvements include adding more animations and optimizing performance.",
     },
     {
+
         name: "Marathon Management",
-        image: projectImg2,
+        image: projectImg3,
         description: "Marathon management involves planning, organizing, and executing marathon events efficiently.",
         briefDescription:
             "Marathon Management  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
@@ -46,12 +53,13 @@ const projects = [
             "Building this platform taught me about react routing operations. The challenge was to implement efficient search functionality. Future improvements include adding user comments and social sharing options..",
     },
     {
-        name: "Newsapers Fullstack Website",
-        image: projectImg3,
+
+        name: "Newsaper Fullstack ",
+        image: projectImg4,
         description: "A full-stack newspaper website manages articles, users, and media with front-end, back-end, and database integration for seamless publishing.",
         briefDescription:
             "Marathon Management  website built with frontend React and Tailwind CSS and also use backend node js,express js mongoDb",
-        techStack: "React, Tailwind CSS, JavaScript, NodeJs, ExpressJs, MongoDB",
+        techStack: "React | Tailwind CSS | JavaScript | NodeJs | ExpressJs | MongoDB",
         liveLink: "https://newspaper-fullstack-fced2.web.app/",
         githubLink:
             "https://github.com/Programming-Hero-Web-Course4/b10a12-client-side-joykumar102",
@@ -60,6 +68,7 @@ const projects = [
     },
 
 ]
+
 
 const Project = () => {
     const [selectedProject, setSelectedProject] = useState(null);
@@ -72,58 +81,65 @@ const Project = () => {
         setSelectedProject(null);
     };
 
-    return (
-        <div className='bg-gray-900'>
-            <div className="container mx-auto text-center px-10 py-20">
-                <h2 className="text-4xl font-bold mb-6 text-accent">My Projects</h2>
-                <p className="mb-12 text-gray-400 w-4/6 mx-auto lg:text-xl">
-                    Here are some of the projects I've worked on that showcase my skills
-                    in frontend and backend development. From creating responsive user
-                    interfaces to building full-stack applications, these projects reflect
-                    my passion for crafting modern, efficient, and scalable web solutions.
-                    Each project highlights my ability to solve problems, write clean
-                    code, and continuously learn new technologies. Explore my work to see
-                    how I bring ideas to life with code!
-                </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <div
-                            key={index}
-                            className="bg-black p-6 rounded-lg shadow-lg hover:shadow-2xl transform transition-transform hover:scale-105 relative"
-                           
-                        >
-                            <img
-                                src={project.image}
-                                alt={project.name}
-                                className="w-full object-cover rounded-md mb-4"
-                            />
-                            <h3 className="text-2xl font-semibold text-white mb-2">
-                                {project.name}
-                            </h3>
-                            <p className="text-gray-400 mb-4">{project.description}</p>
-                            <button
-                                onClick={() => handleViewMore(project)}
-                                className="bg-accent mt-5 text-white px-4 py-2 rounded-md hover:opacity-80"
-                            >
-                                View More
-                            </button>
-                        </div>
-                    ))}
-                </div>
+    const varients = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 }
+    }
+
+
+
+    return (
+        <div
+            id='projects' className='bg-[#1f242d]'>
+            <div
+               className="max-w-7xl mx-auto gap-8 py-20">
+                <Scrool>
+                <h2 className='text-5xl uppercase font-bold text-center text-accent mb-5'>A Small selection of my work</h2>
+                </Scrool>
+                {
+                    projects.map((project, index) =>
+                        <Scrool>
+                            <div key={index} className='lg:flex justify-between gap-10 py-8 px-5'>
+
+                                <img className='lg:w-[700px] rounded-md' src={project.image} alt="" />
+
+
+                                <div className='space-y-5 py-5'>
+
+                                    <motion.div 
+                                    variants={varients}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    transition={{ duration: 0.8 }}
+                                        className='flex gap-3  items-center '>
+                                        <h2 className='text-3xl text-white font-bold'>{project.name}</h2>
+                                        <button className='btn flex gap-3 bg-accent outline-none hover:bg-accent text-white   border-accent  shadow-none  hover:scale-105'><a href={project.liveLink}>View Live  </a> <MdArrowOutward className='text-xl' /></button>
+                                    </motion.div>
+                                    <p                                   
+                                        className='text-2xl text-gray-400'>{project.description}</p>
+                                    <h4 className='text-white  text-lg'>Technologies Used: {project.techStack}</h4>
+                                    <div className='flex-col'>
+                                        <button className='btn  bg-accent outline-none hover:bg-accent text-white   border-accent  shadow-none hover:scale-105'><a href={project.githubLink}>View GitHub Repo</a></button>
+                                    </div>
+                                    <button onClick={() => handleViewMore(project)} className='btn  bg-accent outline-none hover:bg-accent text-white   border-accent  shadow-none hover:scale-105'>Projects Details</button>
+                                </div>
+                            </div>
+                        </Scrool>
+                    )
+                }
             </div>
 
             {/* open modal */}
-
             {selectedProject && (
-                <div className="fixed inset-0  flex items-center justify-center">
-                    <div className="bg-gray-900 text-white p-8 rounded-lg w-11/12 md:w-3/4 lg:w-1/2">
+                <div className="fixed inset-0 bg-black/70 flex items-center justify-center">
+                    <div className="bg-[#1f242d] text-white p-8 rounded-lg w-11/12 md:w-3/4 lg:w-2/3">
                         <h3 className="text-3xl font-bold mb-4">{selectedProject.name}</h3>
-                        <p className="text-gray-400 mb-4">
+                        <p className="text-gray-400 text-2xl mb-4">
                             {selectedProject.briefDescription}
                         </p>
-                        <div className="mb-4">
-                            <strong>Main Technology Stack:</strong>{" "}
+                        <div className="mb-4 text-2xl">
+                            <strong>Technology Used:</strong>{" "}
                             {selectedProject.techStack}
                         </div>
                         <div className="flex gap-4 mb-4">
@@ -144,10 +160,10 @@ const Project = () => {
                                 GitHub Link
                             </a>
                         </div>
-                        <h4 className="text-xl font-bold mb-2">
-                            Challenges & Improvements
+                        <h4 className="text-3xl font-bold mb-2">
+                            Challenges Faced
                         </h4>
-                        <p className="text-gray-400 mb-4">{selectedProject.details}</p>
+                        <p className="text-gray-400 text-xl mb-4">{selectedProject.details}</p>
                         <button
                             onClick={handleCloseModal}
                             className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
@@ -158,8 +174,8 @@ const Project = () => {
                 </div>
             )}
         </div>
-       
     );
+
 };
 
 export default Project;
