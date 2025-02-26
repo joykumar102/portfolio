@@ -57,7 +57,7 @@ return (
         <div className="navbar  fixed top-0 z-10 bg-[#1f242d]/50 px-10">
             <div className="navbar-start ">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                    <div tabIndex={0} role="button" className="btn  btn-ghost lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5 text-accent"
@@ -78,7 +78,7 @@ return (
                         {links}
                     </ul>
                 </div>
-                <a className=" text-3xl text-accent font-bold">Joy Kumar</a>
+                <a className=" lg:text-4xl text-lg text-accent font-bold">Joy Kumar</a>
             </div>
             <div className="navbar-end hidden  lg:flex">
                 <ul className="menu menu-horizontal  text-black">

@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center bg-[#1f242d]  text-white rounded p-10">
+    <footer className="footer footer-center bg-gray-900 text-white rounded p-10">
       <div className='grid grid-cols-1'>
 
         <div className='space-y-8'>
@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
 
         <div className='pt-5'>
-          <p className='text-lg'> © {new Date().getFullYear()} - All rights reserved by <span className='text-2xl font-semibold'>Joy Kumar</span></p>
+          <p className='text-lg'> © {new Date().getFullYear()} - All rights reserved by <span className='text-2xl  font-semibold'>Joy Kumar</span></p>
         </div>
       </div>
 

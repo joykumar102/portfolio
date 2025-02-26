@@ -95,14 +95,14 @@ const Project = () => {
             <div
                className="max-w-7xl mx-auto gap-8 py-20">
                 <Scrool>
-                <h2 className='text-5xl uppercase font-bold text-center text-accent mb-5'>A Small selection of my work</h2>
+                <h2 className='lg:text-5xl text-2xl uppercase font-bold text-center text-accent mb-5'>A Small selection of my work</h2>
                 </Scrool>
                 {
                     projects.map((project, index) =>
                         <Scrool>
                             <div key={index} className='lg:flex justify-between gap-10 py-8 px-5'>
 
-                                <img className='lg:w-[700px] rounded-md' src={project.image} alt="" />
+                                <img className='lg:w-[700px] h-[400px] rounded-md' src={project.image} alt="" />
 
 
                                 <div className='space-y-5 py-5'>
@@ -113,7 +113,7 @@ const Project = () => {
                                     whileInView="visible"
                                     transition={{ duration: 0.8 }}
                                         className='flex gap-3  items-center '>
-                                        <h2 className='text-3xl text-white font-bold'>{project.name}</h2>
+                                        <h2 className='lg:text-3xl text-lg text-white font-bold'>{project.name}</h2>
                                         <button className='btn flex gap-3 bg-accent outline-none hover:bg-accent text-white   border-accent  shadow-none  hover:scale-105'><a href={project.liveLink}>View Live  </a> <MdArrowOutward className='text-xl' /></button>
                                     </motion.div>
                                     <p                                   

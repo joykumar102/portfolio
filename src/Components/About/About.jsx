@@ -34,9 +34,10 @@ const About = () => {
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 0.8 }}
+          className='px-5'
          >
           <img
-          className="max-w-sm mx-auto rounded-lg shadow-2xl"
+          className="lg:max-w-sm  mx-auto rounded-lg shadow-2xl"
           src="https://i.ibb.co.com/z6bHScj/423670923-1792336831210942-7011210272215150681-n.jpg"
           alt="joy kumar"
 

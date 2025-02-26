@@ -13,7 +13,7 @@ const TypeScript = () => {
         <div className="h-14 text-4xl font-bold py-10">
         <p className="text-gray-500">
           I am a{" "}
-          <span className="text-4xl bg-accent text-white font-bold">
+          <span className="lg:text-3xl text-xl bg-accent text-white font-bold">
             {text}
             <Cursor cursorStyle="|" />
           </span>{" "}
